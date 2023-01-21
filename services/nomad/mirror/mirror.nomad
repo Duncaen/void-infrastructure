@@ -89,6 +89,7 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     server_name repo-default.voidlinux.org
+                repo-fastly.voidlinux.org
                 repo-de.voidlinux.org
                 repo-fi.voidlinux.org
                 repo-us.voidlinux.org
