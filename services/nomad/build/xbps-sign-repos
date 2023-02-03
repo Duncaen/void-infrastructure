@@ -1,9 +1,9 @@
 #!/bin/sh
 
 MAINREPO="/pkgs"
-REPOS="$MAINREPO $MAINREPO/nonfree $MAINREPO/multilib $MAINREPO/multilib/nonfree $MAINREPO/debug"
-REPOS="$REPOS $MAINREPO/musl $MAINREPO/musl/nonfree $MAINREPO/musl/debug"
-REPOS="$REPOS $MAINREPO/aarch64 $MAINREPO/aarch64/debug $MAINREPO/aarch64/nonfree"
+REPOS="$MAINREPO $MAINREPO/nonfree $MAINREPO/multilib $MAINREPO/multilib/nonfree $MAINREPO/debug $MAINREPO/bootstrap $MAINREPO/bootstrap/debug"
+REPOS="$REPOS $MAINREPO/musl $MAINREPO/musl/nonfree $MAINREPO/musl/debug $MAINREPO/musl/bootstrap $MAINREPO/musl/bootstrap/debug"
+REPOS="$REPOS $MAINREPO/aarch64 $MAINREPO/aarch64/debug $MAINREPO/aarch64/nonfree $MAINREPO/aarch64/bootstrap $MAINREPO/aarch64/bootstrap/debug"
 ARCHS="i686 x86_64 armv6l armv7l"
 ARCHS="$ARCHS x86_64-musl armv6l-musl armv7l-musl"
 ARCHS="$ARCHS aarch64 aarch64-musl"
