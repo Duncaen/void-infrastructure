@@ -31,6 +31,18 @@ job "nginx" {
         destination = "/srv/www"
       }
 
+      template {
+         data = <<EOT
+    map $http_upgrade $connection_upgrade {
+        default upgrade;
+        ''      close;
+    }
+EOT
+         destination = "local/nginx/00-http-block.conf"
+         perms = 400
+         change_mode = "signal"
+      }
+
       dynamic "template" {
         for_each = [
           "voidlinux.org.crt",
